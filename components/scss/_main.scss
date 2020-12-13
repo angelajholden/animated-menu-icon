@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 100px 25px;
+    color: #fff;
+    font-size: 100%;
+    font-family: "Helvetica", "Arial", sans-serif;
+    background-color: slategray;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 100px;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.line {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 50vh;
+    transform: rotateZ(0) translate(0, 0);
+    transition: all 500ms ease;
+
+    &:nth-of-type(1) {
+        width: 50%;
+    }
+
+    &:nth-of-type(2) {
+        width: 75%;
+    }
+
+    &:nth-of-type(3) {
+        width: 100%;
+    }
+}
+
+.menu_open {
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+
+    &:hover > .line {
+        width: 100%;
+    }
+
+    &:active > .line,
+    &.clicked > .line {
+        background-color: #222;
+
+        &:nth-of-type(1) {
+            width: 100%;
+            transform: rotateZ(45deg) translate(6px, 5.667px);
+        }
+
+        &:nth-of-type(2) {
+            width: 0;
+        }
+
+        &:nth-of-type(3) {
+            transform: rotateZ(-45deg) translate(6px, -5.667px);
+        }
+    }
+}
+
+.main_nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 300ms ease;
+
+    &.active {
+        left: 0;
+    }
+}
