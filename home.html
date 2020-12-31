@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Animated Menu Icon</title>
-        <link rel="stylesheet" href="dist/css/styles.min.css" />
-    </head>
-    <body>
-        <h1>Animated Menu Icon</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animated Menu Icon</title>
+		<link rel="stylesheet" href="dist/css/styles.min.css" />
+	</head>
+	<body>
+		<button aria-label="Open Menu" id="menu_icon" class="menu_open">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</button>
+		<h1>Animated Menu Icon</h1>
 
-        <main>
-            <button aria-label="Open Menu" id="menu_icon" class="menu_open">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <nav id="menu_drawer" class="main_nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </main>
+		<main>
+			<nav id="menu_drawer" class="main_nav">
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Skills</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</main>
 
-        <script src="dist/js/scripts.min.js"></script>
-    </body>
+		<script src="dist/js/scripts.min.js"></script>
+	</body>
 </html>
